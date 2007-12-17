@@ -15,7 +15,6 @@ Source:		http://www.cpan.org/modules/by-module/Locale/%{module}-%{version}.tar.b
 BuildRequires:	perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Locale::Maketext::Lexicon is a module providing lexicon-handling backends, for
