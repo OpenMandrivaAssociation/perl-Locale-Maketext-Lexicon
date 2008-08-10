@@ -1,7 +1,7 @@
 %define module	Locale-Maketext-Lexicon
 %define name	perl-%{module}
-%define version 0.66
-%define release %mkrel 4
+%define version 0.67
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
