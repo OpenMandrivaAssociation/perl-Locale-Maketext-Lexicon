@@ -11,9 +11,7 @@ Group:		Development/Perl
 Summary:	Perl module to use other catalog formats in Maketext
 Url:		http://search.cpan.org/dist/%{module}/
 Source:		http://www.cpan.org/modules/by-module/Locale/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+BuildRequires:	perl(YAML)
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
