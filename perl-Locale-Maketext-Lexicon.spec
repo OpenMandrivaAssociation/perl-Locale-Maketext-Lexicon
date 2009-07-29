@@ -1,19 +1,19 @@
-%define module	Locale-Maketext-Lexicon
-%define name	perl-%{module}
-%define version 0.77
-%define release %mkrel 1
+%define upstream_name	 Locale-Maketext-Lexicon
+%define upstream_version 0.77
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	Perl module to use other catalog formats in Maketext
 License:	MIT
 Group:		Development/Perl
-Summary:	Perl module to use other catalog formats in Maketext
-Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/Locale/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Locale/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(YAML)
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Locale::Maketext::Lexicon is a module providing lexicon-handling backends, for
@@ -21,7 +21,7 @@ Locale::Maketext to read from other localization formats, such as PO files,
 MO files, or from databases via the Tie interface.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +43,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Locale
 %{_bindir}/*
 %{_mandir}/*/*
-
