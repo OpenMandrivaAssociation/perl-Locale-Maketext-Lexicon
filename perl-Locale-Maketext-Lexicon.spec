@@ -1,5 +1,5 @@
 %define upstream_name	 Locale-Maketext-Lexicon
-%define upstream_version 0.77
+%define upstream_version 0.78
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Perl module to use other catalog formats in Maketext
 License:	MIT
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Locale/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Locale/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(YAML)
 BuildArch:      noarch
@@ -27,12 +27,12 @@ MO files, or from databases via the Tie interface.
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
+%check
+%make test
+
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%check
-%__make test
 
 %clean
 rm -rf %{buildroot}
