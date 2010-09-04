@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Perl module to use other catalog formats in Maketext
 License:	MIT
@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(YAML)
+
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -39,7 +40,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes README META.yml
 %{perl_vendorlib}/Locale
 %{_bindir}/*
 %{_mandir}/*/*
