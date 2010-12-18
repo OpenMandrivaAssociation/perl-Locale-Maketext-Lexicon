@@ -1,9 +1,9 @@
 %define upstream_name	 Locale-Maketext-Lexicon
-%define upstream_version 0.82
+%define upstream_version 0.83
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Perl module to use other catalog formats in Maketext
 License:	MIT
