@@ -1,14 +1,14 @@
 %define modname	Locale-Maketext-Lexicon
-%define modver	0.86
+%define modver 0.96
 
 Summary:	Perl module to use other catalog formats in Maketext
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	1
 License:	MIT
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	http://www.cpan.org/modules/by-module/Locale/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Locale/Locale-Maketext-Lexicon-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(YAML)
 BuildRequires:	perl-devel
@@ -37,4 +37,5 @@ MO files, or from databases via the Tie interface.
 %{_bindir}/*
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
