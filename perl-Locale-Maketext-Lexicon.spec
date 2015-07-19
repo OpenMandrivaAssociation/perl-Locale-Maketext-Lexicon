@@ -4,7 +4,7 @@
 Summary:	Perl module to use other catalog formats in Maketext
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
